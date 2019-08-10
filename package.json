@@ -1,0 +1,21 @@
+{
+  "name": "leetcode-study-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathantch/leetcode-study-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathantch/leetcode-study-app/issues"
+  },
+  "homepage": "https://github.com/jonathantch/leetcode-study-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
