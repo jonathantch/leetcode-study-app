@@ -1,14 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 import axios from 'axios';
 
 function App() {
 
   const get = () => {
     axios.get('/test')
-      .then(() => {
-        console.log('yay');
+      .then(({ data }) => {
+        console.dir(data);
       });
   }
 
