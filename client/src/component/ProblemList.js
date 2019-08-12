@@ -1,8 +1,31 @@
 import React from 'react';
+import axios from 'axios';
 
 class ProblemList extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      problems: []
+    }
+
+    this.getAllProblems = this.getAllProblems.bind(this);
+  }
+
+  componentDidMount() {
+    // this.getAllProblems();
+  }
+
+  getAllProblems() {
+    axios.get(`/${this.props.user}`)
+      .then(({ data }) => {
+        this.setState({
+          problems: data
+        })
+      })
+      .catch((err) => {
+        console.log(err)
+      });
   }
 
   render() {

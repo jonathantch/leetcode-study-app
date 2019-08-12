@@ -3,15 +3,24 @@ import ProblemList from'./ProblemList';
 import '../App.css';
 
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
 
+    this.state = {
+      user: 'jonathantch'
+    }
+  }
 
-  return (
-    <div className="App">
-      <h1>Leetcode Study App</h1>
-      <ProblemList />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1>Leetcode Study App</h1>
+        <ProblemList user={this.state.user}/>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
