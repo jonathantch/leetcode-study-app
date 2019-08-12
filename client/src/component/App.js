@@ -1,36 +1,26 @@
 import React from 'react';
-import logo from '../logo.svg';
+import ProblemList from'./ProblemList';
 import '../App.css';
-import axios from 'axios';
 
-function App() {
 
-  const get = () => {
-    axios.get('/test')
-      .then(({ data }) => {
-        console.dir(data);
-      });
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      user: 'jonathantch'
+    }
   }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <button onClick={get}></button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1>Leetcode Study App</h1>
+        <ProblemList user={this.state.user}/>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
